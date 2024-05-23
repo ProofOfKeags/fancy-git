@@ -54,7 +54,7 @@ __fancygit_get_rich_notification_area() {
         icon_changed_files=""
     fi
 
-    number_unpushed_commits=$(fancygit_git_get_unpushed_commits | wc -l)
+    number_unpushed_commits=$(fancygit_git_get_unpushed_commits | wc -l | xargs)
     icon_unpushed_commits="${icon_unpushed_commits}+${number_unpushed_commits}"
     if [ 0 -eq "$number_unpushed_commits" ]
     then
